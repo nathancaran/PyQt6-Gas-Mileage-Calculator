@@ -18,7 +18,11 @@ class MainWindow(QMainWindow):
         # Add layouts and widgets to left pane
         hbox1 = QHBoxLayout()
         current_label = QLabel("Current Mileage")
+        mileage_sb = QSpinBox()
+        mileage_sb.setMinimum(0)
+        mileage_sb.setSuffix("  Miles")
         hbox1.addWidget(current_label)
+        hbox1.addWidget(mileage_sb)
         left_pane.addLayout(hbox1)
 
         main_layout.addLayout(left_pane)
