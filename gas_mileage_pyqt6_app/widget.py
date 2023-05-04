@@ -31,6 +31,11 @@ class MainWindow(QMainWindow):
         right_pane = QVBoxLayout()
         hbox2 = QHBoxLayout()
         current_label = QLabel("Previous Mileage")
+        prev_mileage_sb = QSpinBox()
+        prev_mileage_sb.setMinimum(0)
+        prev_mileage_sb.setSuffix("  Miles")
+        hbox2.addWidget(current_label)
+        hbox2.addWidget(prev_mileage_sb)
         hbox2.addWidget(current_label)
         right_pane.addLayout(hbox2)
 
@@ -42,6 +47,12 @@ class MainWindow(QMainWindow):
         # Add gallons filled box
         hbox3 = QHBoxLayout()
         current_label = QLabel("Gallons Filled")
+        gallons_sb = QSpinBox()
+        gallons_sb.setMinimum(0)
+        gallons_sb.setSuffix("  Gallons")
+        hbox3.addWidget(current_label)
+        hbox3.addWidget(gallons_sb)
+        hbox3.addWidget(current_label)
         hbox3.addWidget(current_label)
         left_pane.addLayout(hbox3)
 
